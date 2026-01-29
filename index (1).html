@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dissertation Showcase | SDM Institute of Nursing Sciences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b2a4a;
+      --royal: #143c6b;
+      --gold: #c9a24d;
+      --gold-soft: #f3e6c8;
+      --bg: #f6f9fc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #5b6b7f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(201,162,77,0.08), transparent 35%),
+        radial-gradient(circle at 90% 15%, rgba(20,60,107,0.08), transparent 35%),
+        linear-gradient(180deg, #f8fbff 0%, #eef3f8 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--royal) 70%);
+      color: #ffffff;
+      padding: 90px 20px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(201,162,77,0.12);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -140px;
+      right: -140px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: rgba(201,162,77,0.10);
+    }
+
+    .hero h1 {
+      margin: 0 auto 18px;
+      max-width: 1000px;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+    }
+
+    .hero p {
+      margin: 6px 0;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: -80px auto 60px;
+      padding: 0 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 34px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 18px 40px rgba(11,42,74,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--gold), #e7c77a, var(--gold));
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.4rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), #e7c77a);
+      color: #3a2a0a;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      box-shadow: 0 6px 16px rgba(201,162,77,0.45);
+    }
+
+    .title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--navy);
+    }
+
+    .muted { color: var(--muted); font-size: 0.95rem; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 12px 0 18px;
+      border-radius: 999px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--navy), var(--royal));
+      color: #ffffff;
+      padding: 16px 36px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 14px;
+      border: 2px solid var(--gold);
+      box-shadow: 0 14px 36px rgba(11,42,74,0.35);
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, var(--royal), var(--navy));
+      transform: translateY(-3px);
+      box-shadow: 0 20px 48px rgba(11,42,74,0.45);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #ffffff, var(--gold-soft));
+      border-left: 6px solid var(--gold);
+      padding: 20px 22px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      margin-top: 14px;
+      box-shadow: inset 0 0 0 1px rgba(201,162,77,0.25);
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 12px 46px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 { font-size: 1.9rem; }
+      .container { margin-top: -50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div style="display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:0 auto 18px; padding:0 10px;">
+      <img src="college-logo.png" alt="College Logo" style="height:70px; background:#ffffff; padding:6px 10px; border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,0.2);" />
+      <img src="university-logo.png" alt="University Logo" style="height:70px; background:#ffffff; padding:6px 10px; border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,0.2);" />
+    </div>
+
+    <h1>A Study to Evaluate the Impact of a Structured Nurse-Led Postoperative Pain Management Program</h1>
+    <div class="divider" style="margin:16px auto 12px;"></div>
+    <p>On Early Recovery of Surgical Patients</p>
+    <p style="margin-top:12px; font-size:0.95rem;">B.Sc. Nursing Dissertation | Academic Year 2025–2026</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <span class="badge">Authors</span>
+      <div class="grid-2">
+        <div><p class="title">Mr. Akhilesh V. Raichur</p><p class="muted">B.Sc. Nursing</p></div>
+        <div><p class="title">Ms. Akamma G</p><p class="muted">B.Sc. Nursing</p></div>
+        <div><p class="title">Mr. Anand A</p><p class="muted">B.Sc. Nursing</p></div>
+        <div><p class="title">Ms. Ashwini C</p><p class="muted">B.Sc. Nursing</p></div>
+        <div><p class="title">Ms. Ashwini N</p><p class="muted">B.Sc. Nursing</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="grid-2">
+        <div>
+          <span class="badge">Guide</span>
+          <h2>Mrs. Lucy Gladies E</h2>
+          <div class="divider"></div>
+          <p class="muted">Assistant Professor</p>
+          <p class="muted">Department of Medical Surgical Nursing</p>
+        </div>
+        <div>
+          <span class="badge">Institution</span>
+          <h2>SDM Institute of Nursing Sciences</h2>
+          <div class="divider"></div>
+          <p class="muted">Sattur, Dharwad, Karnataka</p>
+          <p class="muted">Affiliated to Shri Dharmasthala Manjunatheshwara University</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <span class="badge">About the Study</span>
+      <h2>Research Overview</h2>
+      <div class="divider"></div>
+      <p>
+        This quasi-experimental study evaluates the effectiveness of a structured nurse-led
+        postoperative pain management program on reducing pain intensity and improving early
+        recovery outcomes among surgical patients.
+      </p>
+      <div class="highlight">
+        Key focus areas include systematic pain assessment, nurse-led non-pharmacological
+        interventions, patient education, and early mobilization to enhance recovery.
+      </div>
+    </section>
+
+    <section class="card">
+      <span class="badge">Full Dissertation</span>
+      <h2>View / Download PDF</h2>
+      <div class="divider"></div>
+      <p class="muted">Access the complete dissertation document using the button below.</p>
+      <a class="btn" href="PASTE-YOUR-PDF-LINK-HERE" target="_blank">📄 View / Download Dissertation (PDF)</a>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 | SDM Institute of Nursing Sciences, Sattur, Dharwad<br>
+    For academic and educational purposes only
+  </footer>
+
+</body>
+</html>
